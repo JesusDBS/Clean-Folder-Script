@@ -49,8 +49,8 @@ def fix_path(path:list) -> str:
             
             return os.sep.join(path)
         
-        else:
-            raise ValueError(f"All elements in path: {path} must be strings")
+        
+        raise ValueError(f"All elements in path: {path} must be strings")
     
     raise ValueError("Path can't be an empty list")
 
