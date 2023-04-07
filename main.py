@@ -1,51 +1,11 @@
 import os
 import glob
-import json
 import platform as p
+import shutil
 
-def load_config_json(json_path:str="config.json") -> tuple:
-    r"""
-    Documentation here
-    """
-    assert isinstance(json_path, str), f'Jason path: {json_path} must be a string!'
+from utils.utils import load_config_json, fix_path
 
-    try:
-
-        with open(json_path, "r") as j:
-            config_json = json.load(j)
-        
-        path = config_json["dir_path"]
-        remove_folders_too = config_json["remove_folders_too"]
-
-        return path, remove_folders_too
-
-    except:
-
-        raise FileNotFoundError("Json file not found")
-    
-def check_if_windows():
-    r"""
-    Documentation here
-    """
-    if p.system() == "Windows":
-        return True
-    
-    return False
-
-def fix_path(path:list) -> str:
-    r"""
-    Documentation here
-    """
-    assert isinstance(path, list), f"Path {path} must be a list"
-
-    if check_if_windows():
-
-        path[0] = fr'\{path[0]}'
-    else:
-        path[0] = f'/{path[0]}'
-    
-    return os.sep.join(path)
-
+#main program
 def main(json_path:str="config.json"):
     r"""
     Documentation here
@@ -67,10 +27,12 @@ def main(json_path:str="config.json"):
             try:
                 if os.path.isfile(filename):
                     os.remove(filename)
+                    print(f'....{filename} has been deleted....', '\n')
                     continue
                 
                 if remove_folders_too and os.path.isdir(filename):
-                    os.remove(filename)
+                    shutil.rmtree(filename)
+                    print(f'....{filename} has been deleted....', '\n')
 
             except:
                 raise Exception("An error has occurred please check the files in your folder.")
