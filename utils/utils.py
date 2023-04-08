@@ -31,7 +31,7 @@ def load_config_json(json_path:str) -> tuple:
     
 def check_if_windows() -> bool:
     r"""
-    Check if the OS is Windows and returns True if that the is case. Otherwise False.
+    Checks if the OS is Windows and returns True if that the is case. Otherwise False.
     """
     if p.system() == "Windows":
         return True
@@ -46,8 +46,8 @@ def fix_path(path:list) -> str:
 
     Parameters
     ----------
-    path: str
-        List containing the elements of the path
+    path: list
+        List containing the elements of the path.
     """
     assert isinstance(path, list), f"Path {path} must be a list"
 
@@ -72,7 +72,12 @@ def fix_path(path:list) -> str:
 def check_if_all_elements_are_strings(path:list) -> bool:
     r"""
     This function checks if all elements in the path list are strings, if that is
-    the case returns True. Otherwise False
+    the case returns True. Otherwise False.
+
+    Parameters
+    ----------
+    path: list
+        List containing the elements of the path.
     """
     assert isinstance(path, list), f'Path: {path} must be a string'
 
