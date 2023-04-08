@@ -79,6 +79,6 @@ def check_if_all_elements_are_strings(path:list) -> bool:
     path: list
         List containing the elements of the path.
     """
-    assert isinstance(path, list), f'Path: {path} must be a string'
+    assert isinstance(path, list), f'Path: {path} must be a list'
 
     return all(isinstance(el, str) for el in path)
