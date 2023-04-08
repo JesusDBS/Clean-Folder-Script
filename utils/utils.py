@@ -4,7 +4,14 @@ import os
 
 def load_config_json(json_path:str) -> tuple:
     r"""
-    Documentation here
+    This function loads the parameters to be used in the main function of the program.
+    
+    Returns a tuple with those parameters.
+
+    Parameters
+    ----------
+    json_path: str
+        Path to the json config file where the folder path and the flag for deleting folders are set.
     """
     assert isinstance(json_path, str), f'Jason path: {json_path} must be a string!'
 
@@ -24,7 +31,7 @@ def load_config_json(json_path:str) -> tuple:
     
 def check_if_windows():
     r"""
-    Documentation here
+    Check if the OS is Windows and returns True if that the is case. Otherwise False.
     """
     if p.system() == "Windows":
         return True
@@ -33,7 +40,14 @@ def check_if_windows():
 
 def fix_path(path:list) -> str:
     r"""
-    Documentation here
+    This function fits the path for Windows or Unix OS systems.
+
+    Returns the folder path as string.
+
+    Parameters
+    ----------
+    path: str
+        List containing the elements of the path
     """
     assert isinstance(path, list), f"Path {path} must be a list"
 
@@ -57,7 +71,8 @@ def fix_path(path:list) -> str:
 
 def check_if_all_elements_are_strings(path:list) -> bool:
     r"""
-    Documentation here
+    This function checks if all elements in the path list are strings, if that is
+    the case returns True. Otherwise False
     """
     assert isinstance(path, list), f'Path: {path} must be a string'
 

@@ -8,7 +8,12 @@ from utils.utils import load_config_json, fix_path
 #main program
 def main(json_path:str="config.json"):
     r"""
-    Documentation here
+    This function removes all the files and folders in a given folder path.
+
+    Parameters
+    ----------
+    json_path: str
+        Path to the json config file where the folder path and the flag for deleting folders are set.    
     """
     assert isinstance(json_path, str), f'Path: {json_path} must be a string!'
 
