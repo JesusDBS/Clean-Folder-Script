@@ -29,7 +29,7 @@ def load_config_json(json_path:str) -> tuple:
 
         raise FileNotFoundError("Json file not found")
     
-def check_if_windows():
+def check_if_windows() -> bool:
     r"""
     Check if the OS is Windows and returns True if that the is case. Otherwise False.
     """
