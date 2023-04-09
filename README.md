@@ -21,7 +21,7 @@ To use this script you need to follow these instructions:
 python main.py
 ```
 ---
-**Note**: The path to your folder **has to be absolute** in order for the script to find it.
+**Note**: The path to your folder **has to be absolute** for the script to find it.
 
 **Note**: If you don't want to delete the folders contained in the folder to be cleaned make sure `remove_folders_too` key is set to `false`. 
 
