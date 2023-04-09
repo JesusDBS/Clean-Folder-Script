@@ -26,7 +26,7 @@ python main.py
 **Note**: If you don't want to delete the folders contained in the folder to be cleaned make sure `remove_folders_too` key is set to `false`. 
 
 ## Contributing
-This project is open to improvements. If you think you can improve this project, please make a pull request explaining your changes and why they are worth to be integrated..
+This project is open to improvements. If you think you can improve this project, please make a pull request explaining your changes and why they are worth to be integrated.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
