@@ -17,8 +17,8 @@ To use this script you need to follow these instructions:
 ```
 4. Add your `config.json` file in the root of this project
 5. Open a terminal and run the main.py script as follows:
-```
-python main.py
+```Python
+>>> python main.py
 ```
 ---
 **Note**: The path to your folder **has to be absolute** for the script to find it.
