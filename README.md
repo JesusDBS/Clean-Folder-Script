@@ -2,7 +2,7 @@
 A simple Python script for cleaning your folders.
 
 ## Description
-This is a simple script written in Python that allows you to delete all the files of a folder effortlessly, also you can delete inner folders. It is especially useful for **cleaning your Download folder**.
+This is a simple script written in Python that allows you to delete all the files of a folder effortlessly, also you can delete inner folders. It is especially useful for **cleaning your Downloads folder**.
 
 ## Usage
 To use this script you need to follow these instructions:
